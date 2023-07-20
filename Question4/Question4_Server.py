@@ -2,7 +2,7 @@ import socket
 import threading
 import random
 
-# List of quotes
+# List of inspirational quotes
 quotes = [
     "Believe you can and you're halfway there. - Theodore Roosevelt",
     "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
@@ -13,12 +13,12 @@ quotes = [
 ]
 
 def handle_client(client_socket):
-    # Get a random quote
+    # Get a random inspirational quote
     quote = random.choice(quotes)
 
     # Send the quote to the client
     client_socket.send(quote.encode())
-    print(f"Sending the following quote to the client: {quote}")
+    print(f"QOTD: {quote}")
 
     # Close the connection
     client_socket.close()
